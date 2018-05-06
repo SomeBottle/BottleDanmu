@@ -1,6 +1,7 @@
 # BottleDanmu
 bottledm.js，一个简单的，咸鱼写的弹幕JS
-
+## DEMO：<http://x.imbottle.com/bottledanmu.html>
+ 
 --------------------------------------
 ### 调用方法：
 1. 引用bottledm.js.
