@@ -1,7 +1,7 @@
 # BottleDanmu
 bottledm.js，一个简单的，咸鱼写的弹幕JS
 
-## DEMO：<http://x.imbottle.com/bottledanmu.html>
+## DEMO：<http://x.imbottle.com/bottledm/>
  
 --------------------------------------
 ### 调用方法：
