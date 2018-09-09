@@ -12,6 +12,7 @@ function continuedm(){
 	window.dmpause='no';
 }
 function createdm(e,txt,colors,speed,position){
+	if(document.getElementById(e)!==null&&document.getElementById(e)!==undefined){
 	if(window.danmu==null){
 		window.danmu=0;
 		window.dmrow=1;
@@ -76,6 +77,7 @@ function createdm(e,txt,colors,speed,position){
 	}
 	if(window.dmrow>=20){
 		window.dmrow=1;
+	}
 	}
 }
 function scrolling(ml,e,speed,len){
