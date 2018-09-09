@@ -19,7 +19,9 @@ function createdm(e,txt,colors,speed,position){
 		window.bottomrow=1;
 	}
 	var gete=document.getElementById(e);
+	//gete.style.zIndex=0;
 	gete.style.overflow='hidden';
+	gete.style.position='relative';
 	var dm = document.createElement('div');
 	var text = document.createTextNode(txt);
 	dm.appendChild(text);
@@ -91,6 +93,7 @@ function scrolling(ml,e,speed,len){
 		}
 	}
 	function animate(mp,s){
+		if(document.getElementById(s)!==null&&document.getElementById(s)!==undefined){
 		var gdm=document.getElementById(s);
 		if(window.dmpause!=='yes'){//方便暂停
 		gdm.style.left=(parseInt(gdm.style.left)-mp)+'px';
@@ -98,6 +101,7 @@ function scrolling(ml,e,speed,len){
 		if(parseInt(gdm.style.left)+parseInt(gdm.style.fontSize)*4<=-105*mp){
 			gdm.parentNode.removeChild(gdm);
 			clearInterval(t);
+		}
 		}
 	}
 	var t=setInterval(function(){animate(moveper,e)},20);
@@ -108,6 +112,7 @@ function pausef(e,s){//顶部和尾部暂停弹幕
 	}
 	var gdm=document.getElementById(e);
 	function premove(e){
+		if(document.getElementById(e)!==null&&document.getElementById(e)!==undefined){
 		if(window.dmpause!=='yes'){//方便暂停
 		s-=1;
 		}
@@ -115,6 +120,7 @@ function pausef(e,s){//顶部和尾部暂停弹幕
 		var gdm=document.getElementById(e);
 		gdm.parentNode.removeChild(gdm);
 		clearInterval(t);
+		}
 		}
 	}
 	var t=setInterval(function(){premove(e);},1000);
